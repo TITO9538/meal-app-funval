@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router'
 import { Home } from './pages/home.jsx'
 import { Search } from './pages/Search.jsx'
 import Categories from './pages/Categories.jsx'
+import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path='/categories' element={<Categories></Categories>}/>
       <Route path='*' element={<h1>404 Not Found</h1>}/>
     </Routes>
+    <Footer></Footer>
     </div>
   )
 }
