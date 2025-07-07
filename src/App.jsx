@@ -7,7 +7,7 @@ import Categories from './pages/Categories.jsx'
 
 export default function App() {
   return (
-    <>
+    <div>
     <Navbar></Navbar>
     <Routes>
       <Route path='/' element={<Home></Home>}/>
@@ -15,6 +15,6 @@ export default function App() {
       <Route path='/categories' element={<Categories></Categories>}/>
       <Route path='*' element={<h1>404 Not Found</h1>}/>
     </Routes>
-    </>
+    </div>
   )
 }
