@@ -12,7 +12,7 @@ export default function App() {
     <Routes>
       <Route path='/' element={<Home></Home>}/>
       <Route path='/search' element={<Search></Search>}/>
-      <Route path='/categories' element={<Categories></Categories>}/>
+      <Route path='/categories' element={<Categories> cat1</Categories>}/>
       <Route path='*' element={<h1>404 Not Found</h1>}/>
     </Routes>
     </>
