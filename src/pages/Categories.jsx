@@ -22,14 +22,14 @@ export default function Categories() {
   }, [selectedCategory]);
 
   return (
-    <div className="px-4 py-6">
+    <div className="px-4 py-6 bg-orange-200 p-4 max-w-5xl mx-auto min-h-screen">
       {/* Carrusel de categorías */}
-      <div className="overflow-x-auto">
-        <div className="flex gap-4">
+      <div className="overflow-x-auto bg-orange-100 ">
+        <div className="flex gap-4 ">
           {categories.map((cat) => (
             <div
               key={cat.idCategory}
-              className="text-center min-w-[100px] cursor-pointer hover:scale-105 transition-transform"
+              className="text-center min-w-[100px] cursor-pointer hover:scale-125 transition-transform "
               onClick={() => setSelectedCategory(cat.strCategory)}
             >
               <img
@@ -45,24 +45,38 @@ export default function Categories() {
 
       {/* Mostrar comidas si hay */}
       {selectedCategory && (
-        <>
-          <h2 className="text-xl font-bold mt-8 mb-4 text-center">
-            Comidas de {selectedCategory}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {meals.map((meal) => (
-              <div key={meal.idMeal} className="bg-white rounded shadow p-2 text-center">
-                <img
-                  src={meal.strMealThumb}
-                  alt={meal.strMeal}
-                  className="rounded mb-2 w-full h-32 object-cover"
-                />
-                <h3 className="text-sm font-medium">{meal.strMeal}</h3>
-              </div>
-            ))}
+  <>
+    <h2 className="text-xl font-bold mt-8 mb-4 text-center ">
+      Comidas de {selectedCategory}
+    </h2>
+    <div className="flex flex-wrap justify-center gap-4  ">
+      {meals.map((meal) => (
+        <article
+          key={meal.idMeal}
+          className="w-80 h-[280px] shadow-xl rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl/30 cursor-pointer bg-orange-300"
+        >
+          <div className="w-80 h-48 overflow-hidden flex items-center justify-center ">
+            <img
+              src={meal.strMealThumb}
+              alt={meal.strMeal}
+              className="transition-transform duration-800 hover:scale-110 object-cover w-full h-full "
+            />
           </div>
-        </>
-      )}
+          <div>
+            <h3 className="text-xl font-bold pt-3 px-4 duration-500 hover:scale-105">
+              {meal.strMeal}
+            </h3>
+          </div>
+          <div className="px-5 pt-2 flex gap-2 text-xs text-gray-500">
+            <p>{selectedCategory}</p>
+            {/* Si tienes área puedes ponerla aquí, si no, lo eliminas */}
+          </div>
+        </article>
+      ))}
+    </div>
+  </>
+)}
+
     </div>
   );
 }
