@@ -51,4 +51,12 @@ const Hero = () => {
   );
 };
 
+export function Home() {
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
+}
+
 export default Hero;
