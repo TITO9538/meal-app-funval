@@ -50,9 +50,6 @@ export function Home() {
   return (
     <div>
       <Hero />
-      <div style={{ padding: "20px", textAlign: "center", fontSize: "1.2rem" }}>
-        AQUI VA EL FOOTER AMIGOS..
-      </div>
     </div>
   );
 }
