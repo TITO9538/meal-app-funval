@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Card } from '../components/Card';
 
 export function Search() {
   const [query, setQuery] = useState('');
@@ -183,29 +184,13 @@ export function Search() {
             ) : results.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {results.map((meal) => (
-                  <div
-                    key={meal.idMeal}
-                    className="rounded-lg overflow-hidden shadow hover:shadow-lg transition"
-                    style={{
-                      backgroundColor: '#FAB37A',
-                      color: '#4C2A20'
-                    }}
-                  >
-                    <img 
-                      src={meal.strMealThumb} 
-                      alt={meal.strMeal} 
-                      className="w-full h-48 object-cover" 
-                      onError={(e) => {
-                        e.target.src = 'https://via.placeholder.com/300x200?text=No+Image';
-                      }}
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-bold">{meal.strMeal}</h3>
-                      <p className="text-sm">
-                        {meal.strCategory} | {meal.strArea}
-                      </p>
-                    </div>
-                  </div>
+                  <Card
+                  strMeal={meal.strMeal}
+                  strMealThumb={meal.strMealThumb}
+                  strCategory={meal.strCategory}
+                  strArea={meal.strArea}
+                  key={meal.idMeal}
+                  ></Card>
                 ))}
               </div>
             ) : (
