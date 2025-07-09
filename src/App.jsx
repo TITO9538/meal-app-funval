@@ -5,6 +5,7 @@ import { Home } from './pages/home.jsx'
 import { Search } from './pages/Search.jsx'
 import Categories from './pages/Categories.jsx'
 import Footer from './components/Footer.jsx'
+import { Card } from './components/Card.jsx'
 
 export default function App() {
   return (

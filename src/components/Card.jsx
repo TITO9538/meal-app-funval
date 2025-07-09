@@ -2,8 +2,8 @@ import React from 'react'
 
 export function Card({strMeal, strMealThumb, strCategory, strArea}) {
   return (
-    <article className='w-80 h-70 m-3 shadow-xl rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl/30'>
-        <div className='w-80 h-50 overflow-hidden flex items-center justify-center'>
+    <article className='w-70 h-70 md:w-80 shadow-xl rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl/30'>
+        <div className='w-full h-50 overflow-hidden flex items-center justify-center'>
             <img src={strMealThumb} alt={strMeal} className='transition-transform duration-800 hover:scale-110'/>
         </div>
         <div>
