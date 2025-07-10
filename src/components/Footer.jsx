@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Form from "./Form";
 
 export default function Footer() {
   const [darkMode, setDarkMode] = useState(false);
@@ -70,7 +71,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div onClick={toggleDarkMode} className="cursor-pointer">
+        <div onClick={toggleDarkMode} className="cursor-pointer  ml-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -96,6 +97,7 @@ export default function Footer() {
             />
           </svg>
         </div>
+        <Form />
       </footer>
     </div>
   );

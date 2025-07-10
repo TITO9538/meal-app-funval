@@ -17,7 +17,7 @@ export function Navbar() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-8 text-amber-800 md:hidden cursor-pointer dark:text-yellow-100"
+          className="size-8 text-amber-800 md:hidden cursor-pointer dark:text-yellow-100 "
           onClick={toggleMenu}
         >
           <path
@@ -38,9 +38,9 @@ export function Navbar() {
             Categories
           </Link>
         </div>
-        <img src="./logo.png" alt="MyApp Logo" className="size-20  mr-28 dark:hidden" />
-        <img src="./logo-dark.png" alt="MyApp Logo Dark" className="hidden dark:block size-20 mr-28" />
-        <h1 className="text-yellow-800 font-bold text-2xl dark:text-yellow-100">Rat-Trampa</h1>
+        <img src="./logo.png" alt="MyApp Logo" className="size-20 md:mr-28 dark:hidden" />
+        <img src="./logo-dark.png" alt="MyApp Logo Dark" className="hidden dark:block size-20 md:mr-28" />
+        <h1 className="text-yellow-800 font-bold text-2xl dark:text-yellow-100 ">Rat-Trampa</h1>
       </div>
 
       {isOpen && (
