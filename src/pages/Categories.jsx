@@ -22,14 +22,14 @@ export default function Categories() {
   }, [selectedCategory]);
 
   return (
-    <div className="px-4 py-6 bg-orange-200 p-4 max-w-5xl mx-auto min-h-screen">
+    <div className="px-4 py-6 bg-[#F5E0C3] p-4 max-w-5xl mx-auto min-h-screen">
       {/* Carrusel de categorías */}
-      <div className="overflow-x-auto bg-orange-100 ">
+      <div className="overflow-x-auto bg-orange-50 h-35 ">
         <div className="flex gap-4 ">
           {categories.map((cat) => (
             <div
               key={cat.idCategory}
-              className="text-center min-w-[100px] cursor-pointer hover:scale-125 transition-transform "
+              className="text-center min-w-[100px] cursor-pointer hover:scale-115 transition-transform "
               onClick={() => setSelectedCategory(cat.strCategory)}
             >
               <img
