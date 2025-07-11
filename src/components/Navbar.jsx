@@ -9,7 +9,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="bg-yellow-100 p-4 min-h-16  dark:bg-[#944D1C]  ">
+    <nav className="bg-yellow-100 p-4 min-h-16  dark:bg-[#944D1C] transition-colors duration-500 ease-in-out ">
       <div className="container mx-auto flex justify-between items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ export function Navbar() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-8 text-amber-800 md:hidden cursor-pointer dark:text-yellow-100 "
+          className="size-8 text-amber-800 md:hidden cursor-pointer dark:text-yellow-100 transition-colors duration-500 ease-in-out "
           onClick={toggleMenu}
         >
           <path
@@ -27,7 +27,7 @@ export function Navbar() {
           />
         </svg>
 
-        <div className="space-x-4 hidden md:block text-yellow-800 font-bold text-lg dark:text-yellow-100">
+        <div className="space-x-4 hidden md:block text-yellow-800 font-bold text-lg dark:text-yellow-100 transition-colors duration-500 ease-in-out">
           <Link to="/" className="hover:text-yellow-500 transition">
             Home
           </Link>
@@ -44,7 +44,7 @@ export function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col gap-2 text-yellow-800 font-bold text-lg dark:text-yellow-100">
+        <div className="md:hidden mt-4 flex flex-col gap-2 text-yellow-800 font-bold text-lg dark:text-yellow-100 transition-colors duration-500 ease-in-out">
           <Link
             to="/"
             className="hover:text-yellow-500 transition"
