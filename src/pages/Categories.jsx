@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Card } from "../components/Card";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);
@@ -30,8 +31,7 @@ export default function Categories() {
             <div
               key={cat.idCategory}
               className="text-center min-w-[100px] cursor-pointer hover:scale-115 transition-transform "
-              onClick={() => setSelectedCategory(cat.strCategory)}
-            >
+              onClick={() => setSelectedCategory(cat.strCategory)}>
               <img
                 src={cat.strCategoryThumb}
                 alt={cat.strCategory}
@@ -45,39 +45,21 @@ export default function Categories() {
 
       {/* Mostrar comidas si hay */}
       {selectedCategory && (
-  <>
-    <h2 className="text-xl font-bold mt-8 mb-4 text-center ">
-      Comidas de {selectedCategory}
-    </h2>
-    <div className="flex flex-wrap justify-center gap-4  ">
-      {meals.map((meal) => (
-        <article
-          key={meal.idMeal}
-          className="w-80 h-[280px] shadow-xl rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl/30 cursor-pointer bg-orange-300"
-        >
-          <div className="w-80 h-48 overflow-hidden flex items-center justify-center ">
-            <img
-              src={meal.strMealThumb}
-              alt={meal.strMeal}
-              className="transition-transform duration-800 hover:scale-110 object-cover w-full h-full "
-            />
+        <>
+          <h2 className="text-xl font-bold mt-8 mb-4 text-center ">
+            Comidas de {selectedCategory}
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4  ">
+            {meals.map((meal) => (
+              <Card
+                strMeal={meal.strMeal}
+                strMealThumb={meal.strMealThumb}
+                key={meal.idMeal}
+              />
+            ))}
           </div>
-          <div>
-            <h3 className="text-xl font-bold pt-3 px-4 duration-500 hover:scale-105">
-              {meal.strMeal}
-            </h3>
-          </div>
-          <div className="px-5 pt-2 flex gap-2 text-xs text-gray-500">
-            <p>{selectedCategory}</p>
-            {/* Si tienes área puedes ponerla aquí, si no, lo eliminas */}
-          </div>
-        </article>
-      ))}
-    </div>
-  </>
-)}
-
+        </>
+      )}
     </div>
   );
 }
-
