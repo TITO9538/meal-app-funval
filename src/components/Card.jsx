@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RecipeCard } from "./recipeCard";
+import { RecipeCard } from "./RecipeCard";
 import axios from "axios";
 
 export function Card({ strMeal, strMealThumb, strCategory, strArea, mealId }) {
