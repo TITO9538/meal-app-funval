@@ -32,16 +32,17 @@ export function Card({ strMeal, strMealThumb, strCategory, strArea }) {
       {modalOn && (
         <>
           <RecipeCard
-            strMeal={meal.strMeal}
-            strMealThumb={meal.strMealThumb}
-            strIngredient={meal}
-            strMeasure={meal}
-            strInstructions={meal.strInstructions}
-            strCategory={meal.strCategory}
-            strArea={meal.strArea}
-            strTags={meal.strTags}
-            strYoutube={meal.strYoutube}
-            key={meal.idMeal}></RecipeCard>
+            strMeal="{meal.strMeal}"
+            strMealThumb="{meal.strMealThumb}"
+            strIngredient="{meal}"
+            strMeasure="{meal}"
+            strInstructions="{meal.strInstructions}"
+            strCategory="{meal.strCategory}"
+            strArea="{meal.strArea}"
+            strTags="{meal.strTags}"
+            strYoutube="{meal.strYoutube}"
+            key="{meal.idMeal}"
+            ></RecipeCard>
         </>
       )}
     </>
