@@ -54,6 +54,7 @@ const Hero = () => {
 export function Home() {
   return (
     <div>
+      <div className='p-14 bg-yellow-100/50 dark:bg-[#944D1C]'></div>
       <Hero />
     </div>
   );

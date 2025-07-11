@@ -115,6 +115,8 @@ export function Search() {
   }, [query]);
 
   return (
+    <>
+    <div className='p-14 bg-yellow-100/50 dark:bg-[#944D1C]'></div>
     <div className="dark:bg-[#7E2F17] transition-colors duration-500 ease-in-out">
       <div
         className="p-4 max-w-5xl mx-auto min-h-screen bg-[#F5E0C3] dark:bg-[#4F1C15] transition-colors duration-500 ease-in-out"
@@ -253,6 +255,7 @@ export function Search() {
                       strCategory={meal.strCategory}
                       strArea={meal.strArea}
                       key={meal.idMeal}
+                      mealId={meal.idMeal}
                     />
                   ))}
                 </div>
@@ -315,5 +318,6 @@ export function Search() {
         </div>
       </div>
     </div>
+    </>
   );
 }
