@@ -247,7 +247,7 @@ export function Search() {
                     ))}
                 </div>
               ) : results.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center gap-6">
                   {results.map((meal) => (
                     <Card
                       strMeal={meal.strMeal}
