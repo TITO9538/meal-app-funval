@@ -21,9 +21,9 @@ export function Card({ strMeal, strMealThumb, strCategory, strArea }) {
           />
         </div>
         <div>
-          <h3 className="text-xl font-bold pt-3 px-4 duration-500 hover:scale-105">{strMeal}</h3>
+          <h3 className="text-xl font-bold pt-3 px-4 duration-500 hover:scale-105 dark:text-yellow-100">{strMeal}</h3>
         </div>
-        <div className="px-5 pt-2 flex gap-2 text-xs text-gray-500">
+        <div className="px-5 pt-2 flex gap-2 text-xs text-gray-500 dark:text-yellow-50">
           <p>{strCategory}</p>
           {strCategory && <span className="text-gray-600">|</span>}
           <p>{strArea}</p>

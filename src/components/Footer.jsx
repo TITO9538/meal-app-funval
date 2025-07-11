@@ -19,11 +19,11 @@ export default function Footer() {
 
   return (
     <div>
-      <footer className="bg-[#2b0100] text-[#bba38f] p-4 text-center dark:bg-[#120101] dark:text-[#e9d7c0]">
+      <footer className="bg-[#2b0100] text-[#bba38f] p-4 text-center dark:bg-[#120101] dark:text-[#e9d7c0] transition-colors duration-500 ease-in-out">
         <p className="font-serif mb-4 mt-2">
           &copy; 2023 MyApp. All rights reserved.
         </p>
-        <p className="text-[#f4eadc] text-3xl font-extrabold font-serif mb-5 dark:text-[#ffe8d0]">
+        <p className="text-[#f4eadc] text-3xl font-extrabold font-serif mb-5 dark:text-[#ffe8d0] transition-colors duration-500 ease-in-out">
           Follow us on social media!
         </p>
         <div className="flex justify-center space-x-4 mt-2 ">
